@@ -6,10 +6,11 @@ const app=express();
 const cors=require('cors')
 
 
-connectDB()
+
 app.use(express.json());
 app.use(cors())
 app.use('/tournaments',router);
+connectDB()
    
 app.listen(4000,(req,res)=>{
     
